@@ -1,6 +1,6 @@
 {
   "name": "@magnit-ce/file-input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A custom file input element that accepts a file and provides a simple preview for common file value use-cases.",
   "type": "module",
   "main": "dist/file-input.js",
