@@ -1,0 +1,12 @@
+<label part="label" tabindex="0">
+    <input type="file" part="input" />
+    <span part="field">
+        <slot name="icon"><span part="icon">🗎</span></slot>
+        <span part="status">
+            <span part="filename"></span>
+            <slot name="placeholder"><span part="placeholder"></span></slot>
+        </span>
+    </span>
+</label>
+<a href="" part="clear" tabindex="0"><slot name="clear">Clear Selection</slot></a>
+<a href="#" target="_blank" part="view-link" tabindex="0"><slot name="view-link">View Document</slot></a>
