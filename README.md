@@ -1,7 +1,7 @@
 # `<file-input>` Element
 A custom `HTMLInputElement` that accepts a file and provides a simple preview for common file value use-cases.
 
-Package size: ~7kb minified, ~9kb verbose.
+Package size: ~7kb minified, ~11kb verbose.
 
 ## Quick Reference
 ```html
