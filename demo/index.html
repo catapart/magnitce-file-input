@@ -3,56 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>File Input Demo</title>
+    <title>&lt;file-input&gt; Demo</title>
     <link rel="stylesheet" href="./demo-page.css">
 </head>
 <body>
-    <main>
-        <h1>Overview</h1>
-        <div class="overview">
+    <main class="centered-single-column">
+        <header class="full-width">
+            <div class="content centered-single-column">
+                <h1>The <code>file-input</code> element</h1>
+            </div>
+        </header>
+        <article class="overview">
+            <h2>Overview</h2>
             <p>The <code>&lt;file-input&gt;</code> element was designed to package the collection, inspection, and clearing of files in a form simpler, and with a default style/layout that more closely aligns with other inputs.</p>
             <p>It uses an <code>&lt;input type="file"/&gt;</code> element for its file handling which means that it works identically to the "file" type input.</p>
-        </div>
-        <h1>Examples</h1>
+        </article>
         <article class="basic">
-            <header>Basic Example</header>
-            <section class="description">
+            <h2>Basic Example</h2>
+            <div class="description">
                 <p>The <code>&lt;file-input&gt;</code> element is activated like other input elements, either by click or by key input. Once activated, the user is prompted with a dialog to select an image from their local machine.</p>
                 <p>When the user selects an image, the image is processed into an <code>&lt;img&gt;</code> element and displayed in the input along with the "Clear Selection" and "View Full Size" options.</p>
                 <p>The "Clear Selection" option will clear the input, which ensures that any <code>FormData</code> generated from a wrapping <code>&lt;form&gt;</code> will not include the previously selected image.</p>
                 <p>The "View Full Size" option will provide the selected image's image data to the browser. In most browsers, this will open the image in a new context (Tab/Window) for full-size viewing.</p>
-            </section>
+            </div>
             <div class="example">
                 <file-input></file-input>
             </div>
         </article>
         <article class="customization">
-            <header>Customization</header>
-            <section class="description">
+            <h2>Customization</h2>
+            <div class="description">
                 <p>The <code>&lt;file-input&gt;</code> element allows text customization for its placeholder content, its "View Document" link, and its "Clear Selection" link. Each of these can be customized using the element's <code>&lt;slot&gt;</code>s.</p>
-            </section>
-            <div class="example">
-                <section>
-                    <header>Placeholder Attribute</header>
-                    <p>In this example the input has been given a <code>placeholder</code></code> attribute. Only the text is replaced.</p>
-                    <file-input placeholder="Custom value in placeholder attribute"></file-input>
-                </section>
-                <section>
-                    <header>Slots</header>
-                    <p>In this example, each of the slots have been replaced with custom <code>&lt;span&gt;</code> elements</p>
-                    <file-input>
-                        <span slot="icon">&#x1f4c4;</span>
-                        <span slot="placeholder">Custom placeholder with a custom icon and custom links</span>
-                        <span slot="clear">Custom Clear</span>
-                        <span slot="view-link">Custom Fullsize</span>
-                    </file-input>
-                </section>
-                <section>
-                    <header><code>block</code> Class</header>
-                    <p>In this example, the <code>&lt;file-input&gt;</code> element has been given a class of <code>block</code>, which provides a block-style layout for the input, rather than the inline-style layout that is the default.</p>
-                    <file-input class="block"></file-input>
-                </section>
             </div>
+                <section>
+                    <h4>Placeholder Attribute</h4>
+                    <p>In this example the input has been given a <code>placeholder</code></code> attribute. Only the text is replaced.</p>
+                    
+                    <div class="example">
+                        <file-input placeholder="Custom value in placeholder attribute"></file-input>
+                    </div>
+                </section>
+                <section>
+                    <h4>Slots</h4>
+                    <p>In this example, each of the slots have been replaced with custom <code>&lt;span&gt;</code> elements</p>
+                    <div class="example">
+                        <file-input>
+                                <span slot="icon">&#x1f4c4;</span>
+                                <span slot="placeholder">Custom placeholder with a custom icon and custom links</span>
+                                <span slot="clear">Custom Clear</span>
+                                <span slot="view-link">Custom Fullsize</span>
+                            </file-input>
+                    </div>
+                </section>
+                <section>
+                    <h4><code>block</code> Class</h4>
+                    <p>In this example, the <code>&lt;file-input&gt;</code> element has been given a class of <code>block</code>, which provides a block-style layout for the input, rather than the inline-style layout that is the default.</p>
+                    <div class="example">
+                        <file-input class="block"></file-input>
+                    </div>
+                </section>
         </article>
         <article class="form-data">
             <style>
@@ -96,7 +105,7 @@
                     --icon-primary-color: var(--placeholder-color);
                 }
             </style>
-            <header>Form Data</header>
+            <h2>Form Data</h2>
             <section class="description">
                 <p>The <code>&lt;file-input&gt;</code> element implements form handling so that all expected input functionality works as expected.</p>
                 <p>For example, adding a <code>required</code> attribute will prevent a form from submitting if the input isn't populated. It will also provide a validation message, in that case.</p>
@@ -106,7 +115,7 @@
             </section>
             <div class="example">
                 <form>
-                    <header>Simple Form</header>
+                    <h4>Simple Form</h4>
                     <label>
                         <span>Text Input</span>
                         <input type="text" pattern="[^\d]" placeholder="Basic input for comparison" name="text-data" />

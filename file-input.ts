@@ -188,7 +188,6 @@ export class FileInputElement extends HTMLElement
             {
                 placeholderLabel.textContent = this.getAttribute('placeholder') ?? "Select a file...";
             }
-            this.findPart('label').focus();
 
             if(this.#previewURL != null)
             {
