@@ -1,5 +1,11 @@
 # @magnit-ce/file-input
 
+## 0.0.4
+
+### Patch Changes
+
+- 7003e09: prevented auto-focus on page load
+
 ## 0.0.3
 
 ### Patch Changes
